@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="/assets/stylesheets/style.min.css">
+    <title>NFL Roster Assessment</title>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <h1>MY NFL FANTASY ROSTER</h1>
+            </div>
+            <div class="col-12">
+                <form onsubmit="app.controllers.playersCtrl.searchedPlayersData(event)">
+                    <!-- <input type="text" placeholder="Name" name="nameQuery">
+                    <input type="text" placeholder="Team" name="teamQuery"> -->
+                    <input type="text" placeholder="Search By" name="searchVal">
+                    <select name="category" id="">
+                        <option value="name">Name</option>
+                        <option value="team">Team</option>
+                        <option value="position">Position</option>
+                    </select>
+                    <button type="submit">Search Now</button>
+                </form>
+            </div>
+            <div class="col-12">
+                <h2>MY TEAM</h2>
+                <div class="row" id="myTeam">
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h2>AVAILABLE PLAYERS</h2>
+                <div class="row" id="playersAvailable">
+
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+    <!-- Service JS -->
+    <script src="NFL-Service.js"></script>
+    <!-- Controllers -->
+    <script src="NFL-Controller.js"></script>
+    <script src="app.js"></script>
+
+</body>
+
+</html>
