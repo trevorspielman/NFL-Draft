@@ -15,6 +15,7 @@ PlayersController = function PlayersController() {
             const player = arr[i]
             playersTemplate += `
             <div class="col-3 card m-1 p-1">
+            <img class="searchImg" src="${player.photo}" alt="Photo of ${player.fullname}">
             <h4>${player.fullname}</h4>
             <h5>${player.pro_team}</h5>
             <p><strong>${player.position}</strong></p>
@@ -31,8 +32,8 @@ PlayersController = function PlayersController() {
         for (var i = 0; i < myTeam.length; i++) {
             const player = myTeam[i]
             myTeamTemplate += `
-            <div class="col-3">
-            <img src="${player.photo}" alt="Photo of ${player.fullname}">
+            <div class="col-4 card m-1 p-1">
+            <img class="myTeamImg" src="${player.photo}" alt="Photo of ${player.fullname}">
             <h4>${player.fullname}</h4>
             <h5>${player.pro_team}</h5>
             <p><strong>${player.position}</strong></p>
@@ -46,6 +47,10 @@ PlayersController = function PlayersController() {
     this.addToTeam = function addToTeam(playerId) {
         playersService.addToTeam(playerId)
         getMyTeam()
+    }
+
+    this.teamRestrictions = function teamRestrictions(myTeam) {
+        playersService.teamRestrictions(myTeam)
     }
 
     this.removeFromTeam = function removeFromTeam(removeId) {
