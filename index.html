@@ -17,20 +17,24 @@
             <div class="col-12">
                 <h1 class="headerColor">MY NFL FANTASY ROSTER</h1>
             </div>
-            <div class="col-12">
-                <form onsubmit="app.controllers.playersCtrl.searchedPlayersData(event)">
-                    <!-- <input type="text" placeholder="Name" name="nameQuery">
-                    <input type="text" placeholder="Team" name="teamQuery"> -->
-                    <input type="text" placeholder="Search By" name="searchVal">
-                    <select name="category" id="">
+        </div>
+        <form onsubmit="app.controllers.playersCtrl.searchedPlayersData(event)">
+        <div class="form-row">
+                <div class="col-4">
+                    <input class="form-control form-control-lg" type="text" placeholder="Search By" name="searchVal">
+                </div>
+                <div class="col-4">
+                    <select class="form-control form-control-lg" name="category">
                         <option value="name">Name</option>
                         <option value="team">Team</option>
                         <option value="position">Position</option>
                     </select>
-                    <button type="submit">Search Now</button>
-                </form>
+                </div>
+                <div class="col-4">
+                    <button class="form-control btn-lg btn btn-primary" type="submit">Search Now</button>
+                </div>
             </div>
-        </div>
+        </form>
     </div>
     <div class="container-fluid">
         <div class="row">
